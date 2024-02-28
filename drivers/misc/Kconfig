@@ -5,6 +5,12 @@
 
 menu "Misc devices"
 
+config HELLO_WORLD
+	tristate "Hello World Kernel Module"
+	default m
+	help
+		Test Module via Hello World!
+
 config SENSORS_LIS3LV02D
 	tristate
 	depends on INPUT
