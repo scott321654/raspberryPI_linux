@@ -20,6 +20,17 @@
 		serial1 = &uart0;
 		mmc1 = &mmcnr;
 	};
+
+	sample-gpio-led {
+		status = "okay";
+		compatible = "LED-GRN-YEL-RED";
+		/*pinctrl-names = "default";
+		pinctrl-0 = <&led_0 &led_1 &led_2>;*/
+
+		led0-gpios = <&gpio 23 GPIO_ACTIVE_LOW>;
+		led1-gpios = <&gpio 24 GPIO_ACTIVE_LOW>;
+		led2-gpios = <&gpio 25 GPIO_ACTIVE_LOW>;
+	};
 };
 
 &gpio {
@@ -238,9 +249,16 @@
 };
 
 &i2c1 {
+	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&i2c1_pins>;
 	clock-frequency = <100000>;
+
+	hm3301@40 {
+		status = "okay";
+		compatible = "hm3301";
+		reg = <0x40>;
+	};
 };
 
 &i2c2 {

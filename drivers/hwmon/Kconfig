@@ -1646,6 +1646,15 @@ config SENSORS_RASPBERRYPI_HWMON
 
 	  This driver can also be built as a module. If so, the module
 	  will be called raspberrypi-hwmon.
+	  
+config SENSORS_HM3301
+	tristate "Laser PM2.5 sensor HM3301."
+	depends on I2C
+	help
+	  If you say yes here you get support for the Sensiron HM3301, Laser PM2.5 sensor.
+
+	  This driver can also be built as a module. If so, the module
+	  will be called hm3301.
 
 config SENSORS_SL28CPLD
 	tristate "Kontron sl28cpld hardware monitoring driver"

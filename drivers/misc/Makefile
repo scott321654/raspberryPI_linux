@@ -64,3 +64,4 @@ obj-$(CONFIG_OPEN_DICE)		+= open-dice.o
 obj-$(CONFIG_GP_PCI1XXXX)	+= mchp_pci1xxxx/
 obj-$(CONFIG_VCPU_STALL_DETECTOR)	+= vcpu_stall_detector.o
 obj-$(CONFIG_HELLO_WORLD)	+= hello_world.o
+obj-$(CONFIG_PM25_LED)	+= ioctl_leds.o
